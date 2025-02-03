@@ -1,0 +1,31 @@
+name: product_filter_widget
+description: "A Flutter implementation of product filter in which we can add size colors, brands and all"
+version: 0.1.0-dev.1
+homepage:
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+  crypto: ^3.0.6
+  google_fonts: ^6.2.1
+  cupertino_range_slider_improved: ^2.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.product_filter_widget.product_filter_widget
+        pluginClass: ProductFilterWidgetPlugin
+      ios:
+        pluginClass: ProductFilterWidgetPlugin
+
