@@ -90,7 +90,7 @@ ProductFilterWidget(
 
 ## Demo
 <p align="center">
-<img src="https://gitlab.com/pkhivesara/filter-menu/-/raw/feature-changes/Screen_recording_20241227_011212.gif" width="300"/>
+<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording.gif" width="300"/>
 </p>
 
 
