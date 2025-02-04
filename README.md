@@ -1,6 +1,6 @@
-# Flutter Product Filter Widget
+# Product Filter Widget
 
-This is a Flutter package that provides a customizable product filter component. It allows users to filter products based on various criteria, such as size, color, brand, price range, and more.
+This flutter package provides a customizable product filter component. It allows users to filter products based on various criteria, such as size, color, brand, price range, and more.
 
 ## Features
 
