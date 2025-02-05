@@ -75,7 +75,7 @@ List<FilterModel> filterModelList = [
 
 ProductFilterWidget(
   onSubmit: (selectedValues) {
-    print(selectedValues);
+    log(selectedValues);
   },
   filterModelList: filterModelList,
   theme: const FilterTheme(
@@ -88,9 +88,83 @@ ProductFilterWidget(
 ```
 
 
-## Demo
+## Response on submit button
+
+It returns the selected values from the product filter widget.
+
+```
+{
+  "Size": [
+    {
+      "id": "eb714e7eff282b18",
+      "value": "S"
+    },
+    {
+      "id": "b61c8b17d052dfc4",
+      "value": "M"
+    }
+  ],
+  "Color": [
+    {
+      "id": "18ac29bc21fdbb7a",
+      "value": "Yellow"
+    },
+    {
+      "id": "31841fe40e0ac41b",
+      "value": "Green"
+    }
+  ],
+  "Brand": [
+    {
+      "id": "f73ca4a34536e2f7",
+      "value": "Puma"
+    },
+    {
+      "id": "67f65b2e7338b8a5",
+      "value": "Reebok"
+    }
+  ],
+  "Categories": [
+    {
+      "id": "6321f4276607724d",
+      "value": "Footwear"
+    },
+    {
+      "id": "5de9ce46bee5efaf",
+      "value": "Beauty"
+    }
+  ],
+  "Price": [
+    {
+      "id": "2e2e2c6a17b8b822",
+      "min": "480.17",
+      "max": "5570.01"
+    }
+  ],
+  "Country of Origin": [
+    {
+      "id": "14636b1d2f18dc7e",
+      "value": "Canada"
+    }
+  ],
+  "Discount": [
+    {
+      "id": "77ee2e5270b67f47",
+      "value": "30% and above"
+    }
+  ]
+}
+```
+
+
+## Demo - Android
 <p align="center">
-<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording.gif" width="300"/>
+<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_android.gif" width="300"/>
+</p>
+
+## Demo - iOS
+<p align="center">
+<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_ios.gif" width="300"/>
 </p>
 
 

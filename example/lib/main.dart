@@ -80,6 +80,7 @@ class _MyAppState extends State<MyApp> {
         onSubmit: (selectedValues) {
           log(selectedValues);
         },
+        isResetFieldsAfterSubmit: false,
         filterModelList: filterModelList,
         theme: const FilterTheme(
           submitButtonBackgroundColor: Colors.blueGrey,

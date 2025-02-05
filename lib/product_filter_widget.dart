@@ -21,6 +21,9 @@ class ProductFilterWidget extends StatefulWidget {
   final bool needResetBtn;
   final bool? needRangeBar;
 
+  ///
+  final bool isResetFieldsAfterSubmit;
+
   /// Callback for when the filters are submitted. It passes a Map with filter values.
   final Function(String) onSubmit;
 
@@ -36,6 +39,7 @@ class ProductFilterWidget extends StatefulWidget {
     this.needRangeBar = true,
     required this.filterModelList,
     this.needResetBtn = true,
+    this.isResetFieldsAfterSubmit = false,
     this.theme = const FilterTheme(),
   });
 
@@ -77,28 +81,37 @@ class _ProductFilterWidgetState extends State<ProductFilterWidget> {
   void _submit() {
     final selectedValues = {
       for (final filter in filterModelList)
-        filter.filterTitle: (filter.filterSubSelectionList
-            .where((item) => (item.selected ||
-                (item.rangeValues != null &&
-                    (item.rangeValues!.start != item.minRangeValue ||
-                        item.rangeValues!.end != item.maxRangeValue))))
-            .map((item) => {
-                  'id': item.filterSubId,
-                  'value': item.rangeValues?.toString() ?? item.label,
-                })).toList()
+        filter.filterTitle: (filter.filterSubSelectionList.where((item) => (item.selected ||
+                (item.rangeValues != null && (item.rangeValues!.start != item.minRangeValue ||
+                    item.rangeValues!.end != item.maxRangeValue))))
+            .map((item) => filter.filterType == FilterType.priceRange
+                  ? {
+                      'id': item.filterSubId,
+                      'min': item.rangeValues?.start.toStringAsFixed(2) ??
+                          item.label,
+                      'max': item.rangeValues?.end.toStringAsFixed(2) ??
+                          item.label,
+                    }
+                  : {
+                      'id': item.filterSubId,
+                      'value': item.rangeValues?.toString() ?? item.label,
+                    },
+            )).toList()
     }..removeWhere((key, value) => value.isEmpty);
 
     // Convert the selectedValues map to JSON
     final jsonString = jsonEncode(selectedValues);
     widget.onSubmit(jsonString);
 
-    setState(() {
-      filterModelList = filterModelList
-          .map(
-            _resetFilterModel,
-          )
-          .toList(); // Reset all filters after submission.
-    });
+    if (widget.isResetFieldsAfterSubmit) {
+      setState(() {
+        filterModelList = filterModelList
+            .map(
+              _resetFilterModel,
+            )
+            .toList(); // Reset all filters after submission.
+      });
+    }
   }
 
   // Reset a filter model to its initial state.
@@ -182,7 +195,8 @@ class _ProductFilterWidgetState extends State<ProductFilterWidget> {
                             onTap: (filterId, updateSubSelectionList) {
                               setState(
                                 () {
-                                  selectedId = filterId; // Update selected filter ID.
+                                  selectedId =
+                                      filterId; // Update selected filter ID.
                                   selectedIndex = filterModelList.indexWhere(
                                     (element) => element.filterId == selectedId,
                                   );
