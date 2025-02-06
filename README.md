@@ -88,9 +88,7 @@ ProductFilterWidget(
 ```
 
 
-## Response on submit button
-
-It returns the selected values from the product filter widget.
+## Sample Response
 
 ```
 {
@@ -156,13 +154,7 @@ It returns the selected values from the product filter widget.
 }
 ```
 
-
-## Demo - Android
-<p align="center">
-<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_android.gif" width="300"/>
-</p>
-
-## Demo - iOS
+## Demo
 <p align="center">
 <img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_ios.gif" width="300"/>
 </p>
