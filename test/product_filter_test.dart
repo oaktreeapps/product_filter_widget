@@ -93,14 +93,12 @@ void main() {
       'Sketchers Addition',
     ];
 
-    String searchText = '';
     List<String> filteredItems = items;
 
     // Mock search function
     void onSearchChanged({
       required String value,
     }) {
-      searchText = value;
       filteredItems = items
           .where((item) => item.toLowerCase().contains(value.toLowerCase()))
           .toList();

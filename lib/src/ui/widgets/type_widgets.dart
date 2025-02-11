@@ -76,8 +76,6 @@ class _GetTypeWidgetState extends State<GetTypeWidget> {
         return _buildCheckBoxWidget();
       case FilterType.priceRange:
         return _buildPriceRangeWidget();
-      default:
-        return const SizedBox(); // Return an empty container if no matching filter type
     }
   }
 
@@ -109,7 +107,7 @@ class _GetTypeWidgetState extends State<GetTypeWidget> {
           size: 18,
           color: widget.singleSubListSelectedElement.selected
               ? widget.theme.rightPanelActiveColor
-              : widget.theme.rightPanelInActiveColor.withOpacity(0.3),
+              : widget.theme.rightPanelInActiveColor.withValues(alpha: 0.3),
         ),
       ),
       trailing: widget.singleSubListSelectedElement.count != null

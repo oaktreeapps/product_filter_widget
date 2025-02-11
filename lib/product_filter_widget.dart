@@ -1,4 +1,4 @@
-library product_filter_widget;
+library;
 
 import 'dart:convert';
 
@@ -218,8 +218,8 @@ class _ProductFilterWidgetState extends State<ProductFilterWidget> {
                           ),
                           Container(
                             width: 0.3,
-                            color: widget.theme.dividerColor.withOpacity(
-                              0.5,
+                            color: widget.theme.dividerColor.withValues(
+                              alpha: 0.5,
                             ), // Divider between panels.
                           ),
                           RightPanel(

@@ -55,7 +55,7 @@ class BuildButtons extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border(
                   right: BorderSide(
-                    color: theme.dividerColor.withOpacity(0.2), // Divider color from the theme with slight opacity.
+                    color: theme.dividerColor.withValues(alpha: 0.2), // Divider color from the theme with slight opacity.
                   ),
                 ),
               ),
