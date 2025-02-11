@@ -1,7 +1,8 @@
 name: product_filter_widget
-description: "A Flutter implementation of product filter in which we can add size colors, brands and all"
+description: A Flutter implementation of product filter widget.
+repository: https://github.com/oaktreeapps/product_filter_widget
+
 version: 0.1.0-dev.1
-homepage:
 
 environment:
   sdk: ^3.6.0
