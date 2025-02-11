@@ -16,7 +16,7 @@ To use this package in your Flutter project, add the following line to your `pub
 
 ```yaml
 dependencies:
-  product_filter_widget: ^0.1.0-dev.1
+  product_filter_widget: <latest_version>
 ```
 
 Add then following import:
