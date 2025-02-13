@@ -1,4 +1,4 @@
-# Product Filter Widget
+# product_filter_widget
 
 This flutter package provides a customizable product filter component. It allows users to filter products based on various criteria, such as size, color, brand, price range, and more.
 
@@ -16,7 +16,7 @@ To use this package in your Flutter project, add the following line to your `pub
 
 ```yaml
 dependencies:
-  product_filter_widget: ^0.1.0-dev.2
+  product_filter_widget: <latest_version>
 ```
 
 Add then following import:
