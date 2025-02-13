@@ -139,7 +139,6 @@ final List<SubDataModel> discounts = [
   ),
 ];
 
-
 ///filter model test
 List<FilterModel> filterModelList = [
   FilterModelUtils.buildFilterModel(

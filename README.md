@@ -156,7 +156,7 @@ ProductFilterWidget(
 
 ## Demo
 <p align="center">
-<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_ios.gif" width="300"/>
+<img src="https://raw.githubusercontent.com/oaktreeapps/product_filter_widget/refs/heads/main/recording_ios.gif" width="300"/>
 </p>
 
 

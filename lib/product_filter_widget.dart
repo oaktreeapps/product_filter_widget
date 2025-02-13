@@ -81,10 +81,13 @@ class _ProductFilterWidgetState extends State<ProductFilterWidget> {
   void _submit() {
     final selectedValues = {
       for (final filter in filterModelList)
-        filter.filterTitle: (filter.filterSubSelectionList.where((item) => (item.selected ||
-                (item.rangeValues != null && (item.rangeValues!.start != item.minRangeValue ||
-                    item.rangeValues!.end != item.maxRangeValue))))
-            .map((item) => filter.filterType == FilterType.priceRange
+        filter.filterTitle: (filter.filterSubSelectionList
+            .where((item) => (item.selected ||
+                (item.rangeValues != null &&
+                    (item.rangeValues!.start != item.minRangeValue ||
+                        item.rangeValues!.end != item.maxRangeValue))))
+            .map(
+              (item) => filter.filterType == FilterType.priceRange
                   ? {
                       'id': item.filterSubId,
                       'min': item.rangeValues?.start.toStringAsFixed(2) ??
