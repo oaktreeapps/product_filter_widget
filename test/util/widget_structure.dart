@@ -15,7 +15,6 @@ class BaseStructure extends StatefulWidget {
 }
 
 class _BaseStructureState extends State<BaseStructure> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

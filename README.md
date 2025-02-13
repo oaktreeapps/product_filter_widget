@@ -16,7 +16,7 @@ To use this package in your Flutter project, add the following line to your `pub
 
 ```yaml
 dependencies:
-  product_filter_widget: ^0.1.0-dev.1
+  product_filter_widget: ^0.1.0-dev.2
 ```
 
 Add then following import:
@@ -156,7 +156,7 @@ ProductFilterWidget(
 
 ## Demo
 <p align="center">
-<img src="https://github.com/oaktreeapps/product_filter_widget/blob/master/recording_ios.gif" width="300"/>
+<img src="https://raw.githubusercontent.com/oaktreeapps/product_filter_widget/refs/heads/main/recording_ios.gif" width="300"/>
 </p>
 
 

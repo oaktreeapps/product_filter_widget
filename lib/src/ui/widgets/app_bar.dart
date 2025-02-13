@@ -22,7 +22,8 @@ class BuildAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     // Builds the AppBar container with custom decoration and styling.
     return Container(
-      alignment: Alignment.center, // Aligns the content to the center of the AppBar.
+      alignment:
+          Alignment.center, // Aligns the content to the center of the AppBar.
       decoration: BoxDecoration(
         color: theme.appBarBackgroundColor, // Background color from theme.
         border: Border(
@@ -33,7 +34,7 @@ class BuildAppBar extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(
         horizontal: 20, // Horizontal padding of 20.
-        vertical: 15,  // Vertical padding of 15.
+        vertical: 15, // Vertical padding of 15.
       ),
       child: Row(
         children: [
@@ -41,11 +42,13 @@ class BuildAppBar extends StatelessWidget {
           GestureDetector(
             behavior: HitTestBehavior.translucent,
             onTap: () {
-              Navigator.pop(context); // Pops the current screen off the navigator stack.
+              Navigator.pop(
+                  context); // Pops the current screen off the navigator stack.
             },
             child: Icon(
               Icons.arrow_back, // The back arrow icon.
-              color: theme.appBarTextColor, // Color of the back arrow icon from the theme.
+              color: theme
+                  .appBarTextColor, // Color of the back arrow icon from the theme.
             ),
           ),
           const SizedBox(
@@ -56,8 +59,8 @@ class BuildAppBar extends StatelessWidget {
             'Product Filters',
             style: TextStyle(
               color: theme.appBarTextColor, // Text color from the theme.
-              fontWeight: FontWeight.bold,    // Bold text style for the title.
-              fontSize: 16,                   // Font size of 16.
+              fontWeight: FontWeight.bold, // Bold text style for the title.
+              fontSize: 16, // Font size of 16.
               fontFamily: fontFamily,
             ),
           )

@@ -7,7 +7,6 @@ import '../../filter_theme.dart';
 /// It conditionally displays the Reset button based on the [needResetBtn] parameter.
 /// It accepts [submit], [reset] callback functions, and a [FilterTheme] for custom styling.
 class BuildButtons extends StatelessWidget {
-
   // Callback function to handle the submit action.
   final void Function() submit;
 
@@ -51,27 +50,37 @@ class BuildButtons extends StatelessWidget {
           // Conditionally displays the Reset button if [needResetBtn] is true.
           if (needResetBtn)
             Container(
-              width: MediaQuery.sizeOf(context).width * 0.351, // Sets the width to 35.1% of the screen width.
+              width: MediaQuery.sizeOf(context).width *
+                  0.351, // Sets the width to 35.1% of the screen width.
               decoration: BoxDecoration(
                 border: Border(
                   right: BorderSide(
-                    color: theme.dividerColor.withValues(alpha: 0.2), // Divider color from the theme with slight opacity.
+                    color: theme.dividerColor.withValues(
+                        alpha:
+                            0.2), // Divider color from the theme with slight opacity.
                   ),
                 ),
               ),
               child: GestureDetector(
                 key: const ValueKey('onTapReset'),
-                behavior: HitTestBehavior.translucent, // Ensures that taps on the transparent areas are also detected.
+                behavior: HitTestBehavior
+                    .translucent, // Ensures that taps on the transparent areas are also detected.
                 onTap: () => reset(), // Calls the reset callback when tapped.
                 child: Container(
-                  width: double.infinity, // Makes the container take the full width.
-                  alignment: Alignment.center, // Centers the text inside the container.
-                  decoration: BoxDecoration(color: theme.resetButtonBackgroundColor), // Background color of the Reset button from the theme.
+                  width: double
+                      .infinity, // Makes the container take the full width.
+                  alignment: Alignment
+                      .center, // Centers the text inside the container.
+                  decoration: BoxDecoration(
+                      color: theme
+                          .resetButtonBackgroundColor), // Background color of the Reset button from the theme.
                   child: Text(
                     'Reset',
                     style: TextStyle(
-                      color: theme.resetButtonTextColor, // Text color from the theme.
-                      fontWeight: FontWeight.w400, // Regular font weight for the Reset button text.
+                      color: theme
+                          .resetButtonTextColor, // Text color from the theme.
+                      fontWeight: FontWeight
+                          .w400, // Regular font weight for the Reset button text.
                       fontFamily: fontFamily,
                     ),
                   ),
@@ -85,19 +94,25 @@ class BuildButtons extends StatelessWidget {
           Expanded(
             child: GestureDetector(
               key: const ValueKey('onTapSubmit'),
-              behavior: HitTestBehavior.translucent, // Ensures that taps on the transparent areas are also detected.
+              behavior: HitTestBehavior
+                  .translucent, // Ensures that taps on the transparent areas are also detected.
               onTap: () => submit(), // Calls the submit callback when tapped.
               child: Container(
-                width: double.infinity, // Makes the container take the full width.
-                alignment: Alignment.center, // Centers the text inside the container.
+                width:
+                    double.infinity, // Makes the container take the full width.
+                alignment:
+                    Alignment.center, // Centers the text inside the container.
                 decoration: BoxDecoration(
-                  color: theme.submitButtonBackgroundColor, // Background color of the Submit button from the theme.
+                  color: theme
+                      .submitButtonBackgroundColor, // Background color of the Submit button from the theme.
                 ),
                 child: Text(
                   'Submit',
                   style: TextStyle(
-                    color: theme.submitButtonTextColor, // Text color from the theme.
-                    fontWeight: FontWeight.bold, // Bold font weight for the Submit button text.
+                    color: theme
+                        .submitButtonTextColor, // Text color from the theme.
+                    fontWeight: FontWeight
+                        .bold, // Bold font weight for the Submit button text.
                     fontFamily: fontFamily,
                   ),
                 ),

@@ -59,7 +59,8 @@ class FilterModel {
       filterType: filterType ?? this.filterType,
       showSelectAll: showSelectAll ?? this.showSelectAll,
       showSearchOption: showSearchOption ?? this.showSearchOption,
-      filterSubSelectionList: filterSubSelectionList ?? this.filterSubSelectionList,
+      filterSubSelectionList:
+          filterSubSelectionList ?? this.filterSubSelectionList,
     );
   }
 }

@@ -28,12 +28,16 @@ void main() {
     );
 
     expect(
-      tester.widget<ProductFilterWidget>(find.byType(ProductFilterWidget)).theme,
+      tester
+          .widget<ProductFilterWidget>(find.byType(ProductFilterWidget))
+          .theme,
       isInstanceOf<FilterTheme>(),
     );
 
     expect(
-      tester.widget<ProductFilterWidget>(find.byType(ProductFilterWidget)).onSubmit,
+      tester
+          .widget<ProductFilterWidget>(find.byType(ProductFilterWidget))
+          .onSubmit,
       isInstanceOf<Function(String)>(),
     );
   });

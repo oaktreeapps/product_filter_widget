@@ -12,9 +12,12 @@ import 'package:crypto/crypto.dart';
 ///
 /// Returns a randomly generated string of the specified length.
 String generateRandomString(int length) {
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  final random = Random.secure(); // Cryptographically secure random number generator
-  return List.generate(length, (index) => characters[random.nextInt(characters.length)]).join();
+  const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  final random =
+      Random.secure(); // Cryptographically secure random number generator
+  return List.generate(
+      length, (index) => characters[random.nextInt(characters.length)]).join();
 }
 
 /// Generates a 16-character hash key from the given [input] string.
@@ -27,7 +30,10 @@ String generateRandomString(int length) {
 /// Returns a 16-character hexadecimal string representing the truncated hash of the input.
 String generateHashKey() {
   final generatedRandomString = generateRandomString(16);
-  final bytes = utf8.encode(generatedRandomString); // Convert input string to UTF-8 encoded bytes
+  final bytes = utf8.encode(
+      generatedRandomString); // Convert input string to UTF-8 encoded bytes
   final hash = sha256.convert(bytes); // Compute SHA-256 hash
-  return hash.toString().substring(0, 16); // Return first 16 characters of the hash
+  return hash
+      .toString()
+      .substring(0, 16); // Return first 16 characters of the hash
 }
